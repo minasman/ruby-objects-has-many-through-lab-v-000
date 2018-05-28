@@ -19,6 +19,10 @@ class Doctor
     self.appointments << appointment
     appointment
   end
+  
+  def patients 
+    Appointment.select {|appointment| appointment.patient if appointment.doctor == self}
+  end 
 
     
   
