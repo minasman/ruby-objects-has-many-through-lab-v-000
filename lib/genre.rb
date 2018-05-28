@@ -10,7 +10,7 @@ class Genre
   end 
   
   def artists
-    Artist.all.select {|artist| artist.genres == self}
+    Artist.all.select {|artist| artist.genres.include?(self)}
   end 
   
 end
