@@ -1,3 +1,4 @@
+require 'pry' 
 class Artist 
   @@all = []
   attr_reader :name 
@@ -15,6 +16,7 @@ class Artist
   
   def new_song(name, genre)
     song = Song.new(name, genre)
+    binding.pry 
     song.artist = self 
     self.songs << song
   end
