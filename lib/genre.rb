@@ -1,3 +1,4 @@
+require 'pry'
 class Genre 
   attr_reader :name 
   
@@ -11,6 +12,7 @@ class Genre
   
   def artists
     Song.all.select {|song| song.artist if song.genre == self}
+    binding.pry 
   end 
   
 end
