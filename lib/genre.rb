@@ -12,8 +12,7 @@ class Genre
   
   def artists
     list = Song.all.select {|song| song.artist if song.genre == self}
-    binding.pry 
-    list
+    list.each {|x| x.artist}
   end 
   
 end
