@@ -18,7 +18,9 @@ class Artist
     song = Song.new(name, genre)
     binding.pry 
     song.artist = self 
+    binding.pry 
     self.songs << song
+    binding.pry 
   end
 
 end
